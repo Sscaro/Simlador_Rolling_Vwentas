@@ -1,0 +1,47 @@
+
+# archivos de corrección de nombres.
+Nombres_Columnas:
+  Oficina de ventas : OFICINA_VENTAS
+  Tipología / Segmento 3 : TIPOLOGIA
+  NIF : NIF
+  Agrupación Clientes : AGRUPA_CLIENTES
+  Formato : FORMATO
+  Cod_Cliente : COD_CLIENTE
+  Nom_Cliente : NOM_CLIENTE
+  Categoria : CATEGORIA
+  Sub_Categoria : SUB_CATEGORIA
+  Línea : LINEA
+  Linea : LINEA
+  Marca : MARCA
+  Sector : SECTOR
+  Mes : MES
+  Ppto Neto Acum Año Actual $ : PPTO_NETO_COP
+  Venta Neta Acum Año Actual $ : VENTA_NETA_COP
+  Venta Neta Acum Año Actual KG : VENTA_NETA_KG
+  Venta Neta Acum Año Anterior $ : VENTA_NETA_ANT_COP
+  Venta Neta Acum Año Anterior KG : VENTA_NETA_ANT_KG
+  Ppto Neto Acum Año Actual KG : PPTO_NETO_KG
+  Descuentos Ppto Acum Año Actual $ : DCTOS_ACT
+  Descuentos Acum Año Actual $ : PPTO_DCTOS
+
+Num_mes:
+  ENE : 1
+  FEB : 2
+  MAR : 3
+  ABR : 4
+  MAY : 5
+  JUN : 6
+  JUL : 7
+  AGO : 8
+  SEP : 9
+  OCT : 10
+  NOV : 11
+  DIC : 12
+
+Tipado:
+  NIF : str
+  COD_CLIENTE : str
+ 
+
+
+

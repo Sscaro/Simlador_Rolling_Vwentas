@@ -154,6 +154,8 @@ class concatnerinfo:
             config = yaml.safe_load(file) # archivo yml con algunas parametrizaciones en clave valor
         with open('Insumos\Reemplazos.yml', 'r', encoding='UTF-8') as file:
             config2 = yaml.safe_load(file) # archivo yml con algunas parametrizaciones en clave valor
+       # with open('Insumos\Reemplazos.yml', 'r', encoding='UTF-8') as file:
+       #     config3 = yaml.safe_load(file) # archivo yml con algunas parametrizaciones en clave valor
 
         #driver_trans = self.__leertransformados()    
         for nombre_df, df in self.diccionario_dataframes.items():            
@@ -164,23 +166,24 @@ class concatnerinfo:
                         
             if nombre_df == 'Sin GC y AC' or nombre_df=='Digital' or nombre_df=='GC' :
                 #df = pd.merge(df,driver_trans, on = 'TIPOLOGIA', how='left')
-                df['TIPO_VENTA'] = 'Compañia'        
+                df['TIPO_VENTA'] = 'Compañia'
+                #df.to_excel(f'{nombre_df}.xlsx',index=False)     
         
             elif nombre_df=='AC - Compras':
                 del df['TIPOLOGIA']                
                 for col, par in config2.items():
-                    df = reemplazarvalores(df,col,par)            
+                    df = reemplazarvalores(df,col,par)
+
                 #df = agrupar_por_categoricas(df)
-
-
-
-                df['TIPO_VENTA']  = 'Compra'             
+                df['TIPO_VENTA']  = 'Compra' 
+                #df.to_excel(f'{nombre_df}.xlsx',index=False)              
 
             elif nombre_df=='AC - Calle':
                 #df = pd.merge(df,driver_trans, on = 'TIPOLOGIA', how='left')
                 df['TIPO_VENTA']  = 'Calle'       
                 del df['DCTOS_ACT']
                 del df['PPTO_DCTOS']
+                #df.to_excel(f'{nombre_df}.xlsx',index=False)
 
             self.diccionario_dataframes[nombre_df] = df
             columNum = df.select_dtypes(include=[np.number]).columns
@@ -225,7 +228,7 @@ class concatnerinfo:
         nuevacompra['CANAL_DCTOS'] = 'Tradicional'
         nuevacompra['SUB_CANAL_DCTOS'] = 'Agente Comercial'
         nuevacompra['TIPOLOGIA_DCTOS'] = nuevacompra['TIPOLOGIA'] 
-        #nuevacompra.to_excel('calle_pondv3.xlsx',index=False)
+        #nuevacompra.to_excel('calle_pondv.xlsx',index=False)
         
         return nuevacompra
     
@@ -236,7 +239,7 @@ class concatnerinfo:
        '''
        
        compraponderada = self.ponderacioncompr()     
-       conexion = sqlite3.connect('Salidas\PptoIndirecta.db')      
+       conexion = sqlite3.connect('Salidas\BDSimuladorPpto.db')      
        logging.info("""Comienza proceso de anexo a la base de datos...""")
        for nombre_df,df in self.diccionario_dataframes.items():
             if nombre_df == 'Sin GC y AC' or  nombre_df=='Digital':

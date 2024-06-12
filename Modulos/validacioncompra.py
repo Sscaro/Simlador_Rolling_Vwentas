@@ -33,7 +33,7 @@ class compra:
         return total
     def diferenciascompra(self):
         real = self.__agrupacion()
-        rutabd = os.path.join(self.rutabd,'PptoIndirecta.db')
+        rutabd = os.path.join(self.rutabd,'BDSimuladorPpto.db')
         mi_conexión= sqlite3.connect(rutabd)
         query = """
                 SELECT
@@ -46,7 +46,6 @@ class compra:
                 SUM(DCTOS_ACT) AS DCTOS_ACT,
                 SUM(PPTO_DCTOS) AS PPTO_DCTOS 
                 FROM Consolidado WHERE TIPO_VENTA = 'Compra'
-
             """
         consultaformato = pd.read_sql_query(query, mi_conexión)
         consultaformato_trans = consultaformato.T

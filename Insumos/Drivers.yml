@@ -8,12 +8,17 @@ Nombres_Columnas:
   Formato : FORMATO
   Cod_Cliente : COD_CLIENTE
   Nom_Cliente : NOM_CLIENTE
+  Sector : SECTOR
+  Sector_Clave : SECTOR_CLAVE
   Categoria : CATEGORIA
+  Categoria_Clave : CATEGORIA_CLAVE
   Sub_Categoria : SUB_CATEGORIA
+  Sub_Categoria_Clave : SUB_CATEGORIA_CLAVE
   Línea : LINEA
+  Línea_Clave : LINEA_CLAVE  
   Linea : LINEA
   Marca : MARCA
-  Sector : SECTOR
+  Marca_Clave : MARCA_CLAVE
   Mes : MES
   Ppto Neto Acum Año Actual $ : PPTO_NETO_COP
   Venta Neta Acum Año Actual $ : VENTA_NETA_COP
@@ -21,8 +26,8 @@ Nombres_Columnas:
   Venta Neta Acum Año Anterior $ : VENTA_NETA_ANT_COP
   Venta Neta Acum Año Anterior KG : VENTA_NETA_ANT_KG
   Ppto Neto Acum Año Actual KG : PPTO_NETO_KG
-  Descuentos Ppto Acum Año Actual $ : DCTOS_ACT
-  Descuentos Acum Año Actual $ : PPTO_DCTOS
+  Descuentos Ppto Acum Año Actual $ : PPTO_DCTOS
+  Descuentos Acum Año Actual $ : DCTOS_ACT
 
 Num_mes:
   ENE : 1
@@ -41,6 +46,11 @@ Num_mes:
 Tipado:
   NIF : str
   COD_CLIENTE : str
+  SECTOR_CLAVE : str
+  CATEGORIA_CLAVE : str
+  SUB_CATEGORIA_CLAVE : str
+  LINEA_CLAVE : str
+  MARCA_CLAVE : str
  
 
 

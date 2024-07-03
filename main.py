@@ -26,7 +26,7 @@ def corrercompra():
 if __name__ == '__main__':
     run()
     comparativa = corrercompra()
-    comparativa.to_excel("comparativa.xlsx",index=False)
+    comparativa.to_excel("Salidas\comparativa.xlsx",index=False)
     
     
     

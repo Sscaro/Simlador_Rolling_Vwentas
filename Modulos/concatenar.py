@@ -207,7 +207,9 @@ class concatnerinfo:
         compra_dctos = agrupar_por_categoricas(compra_dctos, descuentos=True)        
         nuevacompra = calle.copy()
         borrar_col = ['NIF','AGRUPA_CLIENTES','FORMATO',
-                      'NOM_CLIENTE','TIPO_VENTA']
+                      'NOM_CLIENTE','TIPO_VENTA','SECTOR_CLAVE',
+                      'CATEGORIA_CLAVE','SUB_CATEGORIA_CLAVE','LINEA_CLAVE',
+                      'MARCA_CLAVE']
         
         for i in borrar_col:
             del nuevacompra[i]
